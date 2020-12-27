@@ -1,0 +1,29 @@
+.home-header {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  height: var(--vh);
+}
+
+.home-header__bg {
+  @include cover;
+  @include coverdiv('fixed');
+  z-index: 0;
+}
+
+.home-header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-header__h1 {
+  max-width: 998px;
+  margin-top: size(120, 40);
+}
+
+.home-header__btn {
+  margin-top: size(40, 20);
+}

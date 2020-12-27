@@ -1,0 +1,19 @@
+* {
+  &::selection {
+    color: white;
+    background: var(--accent);
+  }
+}
+
+body {
+  @include reg;
+  color: var(--black);
+  line-height: 1.5em;
+  font-size: 16px;
+  height: var(--vh);
+}
+
+.e-fixed {
+  overflow: hidden;
+  overflow-x: auto;
+}

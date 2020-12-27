@@ -1,0 +1,17 @@
+{% set title = "Main" %}
+{% set route = "home" %}
+
+{% extends "layouts/_layout.html" %}
+{% import "data/_data.html" as items %}
+
+{% block content %}
+  <header class="home-header">
+    <div class="home-header__bg" style="background-image: url('./img/home/bg.jpg')"></div>
+    <div class="container home-header__container">
+      <h1 class="h1 home-header__h1">Юридические услуги: для бизнеса, госслужащих и частных лиц. Защищаем интересы и выигрываем суды </h1>
+      <a href="#" class="btn btn--white home-header__btn">Получить консультацию 
+        <span class="arrow">{% include "partials/svg/_arrow.html" %}</span>
+      </a>
+    </div>
+  </header>
+{% endblock %}

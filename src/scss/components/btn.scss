@@ -1,0 +1,31 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  @include bold;
+  border-radius: 5px;
+  padding: 27px 40px;
+  line-height: 1em;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  .arrow {
+    display: inline-block;
+    margin-left: 30px;
+    svg {
+      display: block;
+      max-width: 100%;
+      path {
+        transition: stroke 0.3s ease;
+      }
+    }
+  }
+  &--white {
+    background-color: #fff;
+    color: var(--black);
+    &:hover {
+      background-color: var(--black);
+      color: white;
+      svg path {
+        stroke: white;
+      }
+    }
+  }
+}
