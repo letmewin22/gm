@@ -3,4 +3,18 @@
   padding-right: $g-offset;
   width: 100%;
   position: relative;
+  &.a-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section__container {
+  padding-top: size(100, 60);
+  &.last {
+    padding-bottom: size(100, 60);
+  }
 }

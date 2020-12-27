@@ -1,21 +1,17 @@
 .home-header {
   color: white;
-  text-align: center;
   height: 100vh;
   height: var(--vh);
+  position: relative;
 }
 
 .home-header__bg {
   @include cover;
-  @include coverdiv('fixed');
+  @include coverdiv('absolute');
   z-index: 0;
 }
 
 .home-header__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 
@@ -26,4 +22,103 @@
 
 .home-header__btn {
   margin-top: size(40, 20);
+}
+
+.services-section__cards {
+  margin-top: size(52, 32);
+}
+.services-section__card {
+  transition: background-color 0.4s ease;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.services-section__view-more {
+  margin-top: size(44, 32);
+}
+
+.advantages__cards {
+  color: var(--black);
+  margin-top: size(24, 18);
+}
+
+.polis-section__btn {
+  margin-top: size(28, 24);
+}
+
+.polis-section__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.polis-section__container-left {
+  width: 47%;
+}
+
+.polis-section__container-right {
+  width: 50%;
+  perspective: 2000px;
+  &:hover .polis-card {
+    transform: rotateY(180deg);
+  }
+}
+
+.polis-card {
+  position: relative;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  width: 640px;
+  height: 400px;
+  float: right;
+}
+
+.polis-card__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+.polis-card__img--alternate {
+  transform: rotateY(180deg);
+}
+
+.team {
+  background-color: #fff;
+  border-radius: 5px;
+  color: var(--black);
+  width: 100%;
+  margin-top: size(44, 28);
+}
+.team__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  width: 100%;
+  padding-top: size(52, 32);
+  padding-bottom: size(52, 32);
+}
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__item-photo {
+  width: size(172, 120);
+  height: size(172, 120);
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.team__item-h {
+  margin-top: 10px;
+}
+.team__item-pos {
+  margin-top: 4px;
+  display: inline-block;
+  color: #646464;
 }

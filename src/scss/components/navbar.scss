@@ -96,13 +96,24 @@
   }
 }
 
-.navbar__phone {
-  display: block;
+.navbar__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__contacts-items {
+  margin-left: 10px;
+}
+
+.navbar__contacts-item {
   line-height: 1em;
-  font-size: size(20, 14);
-  @include stroke-link;
-  @include media('<=#{$br2}') {
-    font-size: 20px;
+  + .navbar__contacts-item {
+    margin-top: 8px;
+  }
+  a {
+    @include stroke-link;
+    display: inline-block;
+    line-height: 1em;
   }
 }
 

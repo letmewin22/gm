@@ -9,17 +9,23 @@ $default: 16px;
 }
 
 .h1 {
-  font-size: 3.375rem;
+  font-size: size(54, 36);
 }
 
 .h2 {
-  font-size: 3.125rem;
+  font-size: size(50, 32);
 }
 
 .h3 {
-  font-size: 2rem;
+  font-size: size(32, 24);
 }
 
 .h4 {
-  font-size: 1.5rem;
+  font-size: size(24, 20);
+}
+
+.section__text {
+  font-size: size(20, 18);
+  max-width: size(613, 335);
+  line-height: 1.4em;
 }

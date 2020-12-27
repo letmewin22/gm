@@ -1,8 +1,12 @@
 import Highway from '@dogstudio/highway'
+import {PageLoader} from '@/components/loaders/PageLoader'
+import {onLoaded} from '@/utils/onLoaded'
 
 class Home extends Highway.Renderer {
   onEnterCompleted(): void {
-    console.log('Hello from Home')
+    onLoaded(() => {
+      PageLoader.load()
+    })
   }
 }
 // Don`t forget to export your renderer

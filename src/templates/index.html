@@ -7,11 +7,94 @@
 {% block content %}
   <header class="home-header">
     <div class="home-header__bg" style="background-image: url('./img/home/bg.jpg')"></div>
-    <div class="container home-header__container">
-      <h1 class="h1 home-header__h1">Юридические услуги: для бизнеса, госслужащих и частных лиц. Защищаем интересы и выигрываем суды </h1>
-      <a href="#" class="btn btn--white home-header__btn">Получить консультацию 
+    <div class="container home-header__container a-center">
+      <h1 data-i class="h1 home-header__h1">Юридические услуги: для бизнеса, госслужащих и частных лиц. Защищаем интересы и выигрываем суды </h1>
+      <a data-i href="#" class="btn btn--white home-header__btn">Получить консультацию 
         <span class="arrow">{% include "partials/svg/_arrow.html" %}</span>
       </a>
     </div>
   </header>
+  <main>
+    <section class='section services-section'>
+      <div class='container section__container a-center'>
+        <h2 class="h2">Чем мы можем помочь?</h2>
+        <span class="section__line"></span>
+        <p class="section__text">Наша работа — разобраться в вашей ситуации с юридической точки зрения, чтобы предпринять законные действия для решения проблемы любой сложности.</p>
+        <div class="cards services-section__cards">
+          {% for i in range(0, 6) -%}
+            <a href="#" class="card services-section__card">
+              <div class="card__icon services-section__card-icon"></div>
+              <h3 class="h3 card__h services-section__card-h">Защита в уголовных процессах</h3>
+              <p class="card__text services-section__card-text">Адвокаты АО «Г.М. Партнерс» помогают решить семейные и наследственные вопросы в судебном и досудебном порядке. Знание законодательства, психологии и стратегии...</p>
+            </a>
+          {% endfor %}
+        </div>
+        <button class="btn btn--black services-section__view-more">Больше услуг</button>
+      </div>
+    </section>
+    <section class='section section--dark advantages'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Наши преимущества</h2>
+        <span class="section__line"></span>
+        <div class="cards advantages__cards">
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Работаем в команде</h3>
+            <p class="card__text advantages__card-text">Обращаясь к нам за помощью, клиенты знают, что над их делом будет работать команда юристов и адвокатов. Мы быстро подключаемся в масштабные проекты, чтобы разрешать сложные ситуации — это конкурентное преимущество перед частными специалистами.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Берем на себя ответственность</h3>
+            <p class="card__text advantages__card-text">Не используем шаблонных решений. Каждый случай — уникален, поэтому мы создаем стратегию действий, корректируем тактику во время ведения дела и учитываем любые детали, чтобы выиграть ваше дело.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Отвечаем за юридическую помощь</h3>
+            <p class="card__text advantages__card-text">Разрешение дел в пользу клиента — это основная задача нашего адвокатского объединения. Мы находим путь выхода из сложных ситуаций, реализуем его в реальной жизни и помогаем клиентам добиться нужного результата.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section polis-section'>
+      <div class='container section__container polis-section__container last'>
+        <div class="polis-section__container-left">
+          <h2 class="h2">Адвокатский полис</h2>
+          <span class="section__line"></span>
+          <p class="section__text">Жизнь в современном обществе периодически требует неотложной квалифицированной юридической помощи адвоката. Адвокатские полисы АО «G.M. Partners» обеспечивают незамедлительное вмешательство наших адвокатов в неотложных жизненных ситуациях.</p>
+          <a href="#" class="btn btn--black polis-section__btn">Подробнее</a>
+        </div>
+        <div class="polis-section__container-right">
+          <div class="polis-card">
+            <img class="polis-card__img polis-card__img--main" src="./img/polis-card.png" alt="card">
+            <img class="polis-card__img polis-card__img--alternate" src="./img/polis-2.png" alt="card">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section section--dark advantages'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Наша команда</h2>
+        <span class="section__line"></span>
+        <p class="section__text">АО «G.M. Partners» - это профессиональная команда практикующих адвокатов и юристов, чей многолетний опыт позволяет предоставлять квалифицированную юридическую помощь как коммерческим и некоммерческим организациям, так и государственным ведомствам и частным лицам</p>
+        <div class="team">
+          <ul class="team__items">
+            {% for i in range(0, 6) -%}
+              <li class="team__item">
+                <div class="team__item-photo"></div>
+                <h4 class="h4 team__item-h">Григорий Шепитко</h4>
+                <span class="team__item-pos">Управляющий партнер, адвокат</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class='section clients'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Наши клиенты</h2>
+        <span class="section__line"></span>
+        <p class="section__text">Нам доверяют, потому что знают, что мы сможем помочь даже в самых сложных вопросах</p>
+      </div>
+    </section>
+  </main>
 {% endblock %}

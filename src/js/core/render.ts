@@ -8,6 +8,7 @@ import {resize} from '@emotionagency/utils'
 import {winH} from '@/utils/winH'
 import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
+import {Loader} from '@/components/loaders/Loader'
 
 export const render = <T>(H: T): void => {
   const hooks = new Hooks(H)
@@ -26,14 +27,16 @@ export const render = <T>(H: T): void => {
 
   hooks.useLoad(() => {
     resize.on(winH)
-    const dropdown = new Dropdown({
-      btn: '.dropdown__btn',
-      items: '.dropdown__content',
-      parent: '.dropdown'
-    })
-    dropdown.init()
+    new Loader(async() => {
+      const dropdown = new Dropdown({
+        btn: '.dropdown__btn',
+        items: '.dropdown__content',
+        parent: '.dropdown'
+      })
+      dropdown.init()
 
-    new Nav()
+      new Nav()
+    })
   })
 
   const links = document.querySelectorAll('nav a')

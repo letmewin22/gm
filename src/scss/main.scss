@@ -17,3 +17,32 @@ body {
   overflow: hidden;
   overflow-x: auto;
 }
+
+button {
+  background-color: transparent;
+}
+
+.section {
+  --color: var(--black);
+  &--dark {
+    --color: white;
+    background-image: url('../img/dark-pattern.jpg');
+    @include cover;
+    color: var(--color);
+    margin-top: size(100, 60);
+  }
+}
+
+.section__line {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background-color: var(--color);
+  width: size(58, 32);
+  display: block;
+  height: 1px;
+}
+
+[data-i] {
+  transform: translateY(150px);
+  opacity: 0;
+}

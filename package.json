@@ -9,7 +9,8 @@
     "start": "gulp",
     "precommit": "lint-staged",
     "lint": "eslint --ignore-pattern 'src/js/libs/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
-    "lint-fix": "npm run lint -- --fix"
+    "lint-fix": "npm run lint -- --fix",
+    "ghpages": "git add build -f && git commit -m \"build commit\" && git subtree push --prefix build origin gh-pages"
   },
   "authors": "emotion <hello@emotion-agency.com>",
   "license": "MIT",
@@ -77,6 +78,7 @@
     "@dogstudio/highway": "^2.1.3",
     "@emotionagency/form": "^0.1.5",
     "@emotionagency/utils": "^0.0.6",
-    "gsap": "^3.3.4"
+    "gsap": "^3.3.4",
+    "imagesloaded": "^4.1.4"
   }
 }

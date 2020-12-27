@@ -28,4 +28,12 @@
       }
     }
   }
+  &--black {
+    background-color: var(--black);
+    color: #fff;
+    &:hover {
+      background-color: #f4f4f4;
+      color: var(--black);
+    }
+  }
 }
