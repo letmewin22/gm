@@ -26,7 +26,7 @@
 /*!****************************************!*\
   !*** ./src/js/core/renderers/index.ts ***!
   \****************************************/
-/*! exports provided: home */function(e,t,n){"use strict";n.r(t),n.d(t,"home",(function(){return s}));var s=function(){return n.e(/*! import() | home */"home").then(n.bind(null,/*! ./Home */"./src/js/core/renderers/Home.ts"))}},"./src/js/core/transitions/Basic.ts":
+/*! exports provided: home */function(e,t,n){"use strict";n.r(t),n.d(t,"home",(function(){return s}));var s=function(){return Promise.all(/*! import() | home */[n.e("vendors~home"),n.e("home")]).then(n.bind(null,/*! ./Home */"./src/js/core/renderers/Home.ts"))}},"./src/js/core/transitions/Basic.ts":
 /*!******************************************!*\
   !*** ./src/js/core/transitions/Basic.ts ***!
   \******************************************/
