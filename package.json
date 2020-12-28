@@ -79,6 +79,7 @@
     "@emotionagency/form": "^0.1.5",
     "@emotionagency/utils": "^0.0.6",
     "gsap": "^3.3.4",
-    "imagesloaded": "^4.1.4"
+    "imagesloaded": "^4.1.4",
+    "scrollbooster": "^3.0.2"
   }
 }

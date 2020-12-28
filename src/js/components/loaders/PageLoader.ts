@@ -6,7 +6,7 @@ export class PageLoader {
 
     const tl = gsap.timeline({
       onComplete: () => {
-        document.body.classList.remove('e-fixed')
+        document.body.classList.remove('loading')
         cb && cb()
       }
     })

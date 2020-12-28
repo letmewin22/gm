@@ -94,7 +94,24 @@
         <h2 class="h2">Наши клиенты</h2>
         <span class="section__line"></span>
         <p class="section__text">Нам доверяют, потому что знают, что мы сможем помочь даже в самых сложных вопросах</p>
+        <div class="clients__items-wrapper">
+          <ul class="clients__items">
+            {% for i in range(0, 14) -%}
+              <li class="clients__item">
+                <img src="./img/clients/1.jpg" alt="client logo">
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="clients__scrollbar">
+          <div class="clients__thumb"></div>
+        </div>
       </div>
     </section>
   </main>
+  <footer class="footer footer--dark">
+    <div class="container footer__container">
+      <h2 class="h2">Footer</h2>
+    </div>
+  </footer>
 {% endblock %}
