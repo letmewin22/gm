@@ -9,7 +9,7 @@ $default: 16px;
 }
 
 .h1 {
-  font-size: size(54, 36);
+  font-size: size(54, 32);
 }
 
 .h2 {
@@ -28,4 +28,10 @@ $default: 16px;
   font-size: size(20, 18);
   max-width: size(613, 335);
   line-height: 1.4em;
+  @include media('<=#{$br1}') {
+    max-width: 90%;
+  }
+  @include media('<=#{$br3}') {
+    max-width: 100%;
+  }
 }

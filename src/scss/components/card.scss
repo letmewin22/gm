@@ -3,10 +3,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  @include media('<=#{$br1}') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('<=#{$br3}') {
+    grid-template-columns: 1fr;
+  }
 }
 .card {
   background-color: #fff;
-  padding: 12px;
+  padding: 16px 24px;
   box-shadow: 0px 0px 50px rgba(179, 179, 179, 0.2);
   border-radius: 5px;
   display: flex;
@@ -19,10 +25,20 @@
   width: size(90, 60);
   height: size(90, 60);
   background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    display: block;
+    max-width: 100%;
+    width: size(52, 32);
+    height: size(52, 32);
+  }
 }
 
 .card__h {
   margin-top: size(12, 8);
+  line-height: 1.1em;
 }
 .card__text {
   margin-top: size(20, 16);

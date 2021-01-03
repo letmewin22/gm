@@ -3,7 +3,7 @@
   align-items: center;
   @include bold;
   border-radius: 5px;
-  padding: 27px 40px;
+  padding: size(27, 18) size(40, 30);
   line-height: 1em;
   transition: color 0.3s ease, background-color 0.3s ease;
   .arrow {

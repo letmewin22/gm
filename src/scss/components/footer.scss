@@ -6,6 +6,15 @@
   display: flex;
   justify-content: space-between;
   margin-top: size(72, 40);
+  @include media('<=#{$br2}') {
+    flex-direction: column;
+  }
+}
+
+.footer__bottom-right {
+  @include media('<=#{$br2}') {
+    margin-top: 32px;
+  }
 }
 
 .footer__bottom-id {
@@ -17,6 +26,8 @@
   font-size: 14px;
   margin-top: size(48, 36);
   display: block;
+  @include stroke-link;
+  display: inline-block;
 }
 
 .footer__bottom-contacts {
@@ -59,9 +70,13 @@
     width: 30px;
     height: 30px;
     background-color: white;
+    transition: background-color 0.3s ease;
     svg {
       display: block;
       max-width: 100%;
+    }
+    &:hover {
+      background-color: gray;
     }
   }
   + .footer__bottom-social-item {

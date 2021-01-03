@@ -48,17 +48,18 @@
 }
 
 .polis-section__container {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-between;
-}
-
-.polis-section__container-left {
-  width: 47%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  @include media('<=#{$br1}') {
+    grid-template-columns: 1fr;
+  }
 }
 
 .polis-section__container-right {
-  width: 50%;
+  width: 100%;
   perspective: 2000px;
   &:hover .polis-card {
     transform: rotateY(180deg);
@@ -69,9 +70,14 @@
   position: relative;
   transition: transform 1s ease;
   transform-style: preserve-3d;
-  width: 640px;
-  height: 400px;
-  float: right;
+  width: size(640, 335);
+  height: size(400, 209);
+  @include media('>#{$br1}') {
+    float: right;
+  }
+  @include media('<=#{$br4}') {
+    width: 100%;
+  }
 }
 
 .polis-card__img {
@@ -101,6 +107,12 @@
   width: 100%;
   padding-top: size(52, 32);
   padding-bottom: size(52, 32);
+  @include media('<=#{$br1}') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('<=#{$br3}') {
+    grid-template-columns: 1fr;
+  }
 }
 .team__item {
   display: flex;
@@ -111,7 +123,13 @@
   width: size(172, 120);
   height: size(172, 120);
   border-radius: 50%;
-  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .team__item-h {
