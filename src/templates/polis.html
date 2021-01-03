@@ -1,0 +1,122 @@
+{% set title = "polis" %}
+{% set route = "polis" %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <header class="polis-header">
+    <div class="polis-header__bg" style="background-image: url('./img/polis-bg.png')"></div>
+    <div class="container polis-header__container a-center">
+      <h1 data-i class="h1 polis-header__h1">Адвокатский полис</h1>
+      <p data-i class="polis-header__desc">Это именной документ, подтверждающий наличие заключенного договора с адвокатским объединением «G.M. Partners», предоставляющий владельцу полиса право на получение неотложной правовой помощи адвокатов нашего объединения</p>
+      <div data-i class="polis-header__btns">
+        <a href="#" class="btn btn--white polis-header__btn">Оформить заявку</a>
+        <a href="#" class="btn btn--white btn--oultine polis-header__btn">Подробнее</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class='section how-work'>
+      <div class='container section__container a-center'>
+        <h2 class="h2">Как это работает?</h2>
+        <span class="section__line"></span>
+        <ul class="how-work__items">
+          <li class="how-work__item">
+            <div class="how-work__icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
+            <span class="how-work__num">01</span>
+            <h3 class="how-work__h">Оформление заявки</h3>
+            <p class="how-work__text">Вы выбираете тарифный план и оформляете заявку на нашем сайте. С Вами свяжется наш менеджер для уточнения деталей и согласования времени подписания договора</p>
+          </li>
+          <li class="how-work__item">
+            <div class="how-work__icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
+            <span class="how-work__num">02</span>
+            <h3 class="how-work__h">Заключение договора</h3>
+            <p class="how-work__text">Мы заключаем персональный договор о правовой помощи в соответсвии с которым, Вы получаете право на правовую помощь в течении всего срока действия полиса</p>
+          </li>
+          <li class="how-work__item">
+            <div class="how-work__icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
+            <span class="how-work__num">03</span>
+            <h3 class="how-work__h">Получение полиса</h3>
+            <p class="how-work__text">На ваше имя выпускается именная карта "Адвокатский полис", которая подтверждает факт наличия договора с адвокатским объединением</p>
+          </li>
+          <li class="how-work__item">
+            <div class="how-work__icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
+            <span class="how-work__num">04</span>
+            <h3 class="how-work__h">Вызов адвоката</h3>
+            <p class="how-work__text">В случае возникновения правовых проблем Вы предъявляете Вашу карту "Адвокатский полис" представителям правоохранительных органов и наши адвокаты оказывают помощь</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class='section section--dark plans'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Тарифные планы</h2>
+        <span class="section__line"></span>
+        <div class="plans__table-wrapper">
+          <table class="plans__table">
+            <thead>
+              <tr class="tr-head">
+                <th scope="col"></th>
+                <th scope="col">STANDART</th>
+                <th scope="col">SILVER</th>
+                <th scope="col">VIP +</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="th-left" scope="row">Устные консультации</th>
+                <td>3 раз</td>
+                <td>не ограничено</td>
+                <td>не ограничено</td>
+              </tr>
+              <tr>
+                <th class="th-left" scope="row">"Поговорите с моим адвокатом"</th>
+                <td>3 раз</td>
+                <td>12 раз</td>
+                <td>не ограничено</td>
+              </tr>
+              <tr>
+                <th class="th-left" scope="row">Обжалование постановлений о привлечении к административной ответственности</th>
+                <td>1 раз</td>
+                <td>5 раз</td>
+                <td>не ограничено</td>
+              </tr>
+              <tr>
+                <th class="th-left" scope="row">Помощь при оформлении ДТП</th>
+                <td>1 раз</td>
+                <td>2 раза</td>
+                <td>не ограничено</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+    <section class='section advantages'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Наши преимущества</h2>
+        <span class="section__line"></span>
+        <div class="cards advantages__cards">
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/1.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Работаем в команде</h3>
+            <p class="card__text advantages__card-text">Обращаясь к нам за помощью, клиенты знают, что над их делом будет работать команда юристов и адвокатов. Мы быстро подключаемся в масштабные проекты, чтобы разрешать сложные ситуации — это конкурентное преимущество перед частными специалистами.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/2.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Берем на себя ответственность</h3>
+            <p class="card__text advantages__card-text">Не используем шаблонных решений. Каждый случай — уникален, поэтому мы создаем стратегию действий, корректируем тактику во время ведения дела и учитываем любые детали, чтобы выиграть ваше дело.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/3.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Отвечаем за юридическую помощь</h3>
+            <p class="card__text advantages__card-text">Разрешение дел в пользу клиента — это основная задача нашего адвокатского объединения. Мы находим путь выхода из сложных ситуаций, реализуем его в реальной жизни и помогаем клиентам добиться нужного результата.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "partials/_clients.html" %}
+  </main>
+  {% include "partials/_footer.html" %}
+{% endblock %}

@@ -1,15 +1,14 @@
 import Highway from '@dogstudio/highway'
 import {PageLoader} from '@/components/loaders/PageLoader'
-import {onLoaded} from '@/utils/onLoaded'
 import {clients, IClients} from '@/components/clients'
+import {onLoaded} from '@/utils/onLoaded'
 
-class Home extends Highway.Renderer {
+export default class Polis extends Highway.Renderer {
   clients: IClients
 
   onEnterCompleted(): void {
     onLoaded(() => {
       PageLoader.load()
-
       this.clients = clients()
     })
   }
@@ -17,5 +16,3 @@ class Home extends Highway.Renderer {
     this.clients.destroy()
   }
 }
-// Don`t forget to export your renderer
-export default Home

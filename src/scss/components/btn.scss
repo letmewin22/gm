@@ -36,4 +36,9 @@
       color: var(--black);
     }
   }
+  &--oultine {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
 }
