@@ -267,6 +267,7 @@
 
 .get-polis__price {
   display: block;
+  margin: auto;
   margin-left: 10px;
   @include media('<=1280px') {
     margin-left: 0;
