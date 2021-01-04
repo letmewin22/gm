@@ -1,0 +1,87 @@
+{% set title = "service" %}
+{% set route = "service" %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <header class="service-header">
+    <div class="service-header__bg" style="background-image: url('./img/home/bg.jpg')"></div>
+    <div class="container service-header__container a-center">
+      <h1 data-i class="h1 service-header__h1">Защита в уголовных процессах</h1>
+      <p data-i class="service-header__desc">Наши адвокаты обеспечат надежную и эффективную правовую помощь как на стадии следствия, так и в судебном производстве, анализируя каждую деталь и используя максимум возможностей для определения наилучшей стратегии защиты</p>
+      <a data-i href="#" class="btn btn--white service-header__btn">Получить консультацию 
+        <span class="arrow">{% include "partials/svg/_arrow.html" %}</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class='section services-types'>
+      <div class='container section__container'>
+        <ul class="services-types__cards">
+          {% for i in range(0, 6) -%}
+            <li class="services-types__card">
+              <div class="services-types__card-icon"><img src="./img/icons/advantages/1.svg" alt="icon"></div>
+              <div class="services-types__content">
+                <h3 class="h3 services-types__h3">Защита подозреваемых, обвиняемых, подсудимых</h3>
+                <p class="services-types__text">Мы являемся ведущей фирмой по обеспечению качества и ценности для наших клиентов. Все наши профессионалы имеют юридический опыт более 5 лет. Нам нравится то, что мы делаем.</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    <section class='section section--dark advantages'>
+      <div class='container section__container a-center last'>
+        <h2 class="h2">Наши преимущества</h2>
+        <span class="section__line"></span>
+        <div class="cards advantages__cards">
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/1.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Работаем в команде</h3>
+            <p class="card__text advantages__card-text">Обращаясь к нам за помощью, клиенты знают, что над их делом будет работать команда юристов и адвокатов. Мы быстро подключаемся в масштабные проекты, чтобы разрешать сложные ситуации — это конкурентное преимущество перед частными специалистами.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/2.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Берем на себя ответственность</h3>
+            <p class="card__text advantages__card-text">Не используем шаблонных решений. Каждый случай — уникален, поэтому мы создаем стратегию действий, корректируем тактику во время ведения дела и учитываем любые детали, чтобы выиграть ваше дело.</p>
+          </div>
+          <div class="card advantages__card">
+            <div class="card__icon advantages__card-icon"><img src="./img/icons/advantages/3.svg" alt="icon"></div>
+            <h3 class="h3 card__h advantages__card-h">Отвечаем за юридическую помощь</h3>
+            <p class="card__text advantages__card-text">Разрешение дел в пользу клиента — это основная задача нашего адвокатского объединения. Мы находим путь выхода из сложных ситуаций, реализуем его в реальной жизни и помогаем клиентам добиться нужного результата.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section specialists'>
+      <div class='container section__container a-center'>
+        <h2 class="h2">Профильный специалист</h2>
+        <span class="section__line"></span>
+        <ul class="specialists__items">
+        {% for i in range(0, 3) -%}
+          <li class="specialists__item">
+            <div class="specialists__item-photo">
+              <img src="./img/services/specialists/1.jpg" alt="">
+            </div>
+            <div class="specialists__item-content">
+              <h3 class="specialists__item-h">Григорий Шепитко</h3>
+              <div class="specialists__item-occupation">Адвокат</div>
+              <div class="specialists__item-text">
+                <p>Опыт работы в области права с 2012 года.
+                  <br>• с 2012 по 2013 г. — юрисконсульт ООО «Адвокатская компания «Альтерра»;
+                  <br>• с 2013 по 2014 г. —  помощник адвоката АО «Альтерра»;
+                  <br>• с 2014 по 2017 г. — индивидуальная юридическая практика по представительству физических и юридических лиц в гражданских, административных и хозяйственных спорах;
+                  <br>• с 2017 по 2018 г.  — основатель ООО «Юридическая группа «Асцонз»
+                  <br>• с 2018 г. по текущий момент — адвокат и управляющий партнер АО «Г.М. Партнерс».
+                  <br><br>Имеет успешный опыт защиты клиентов в резонансных делах, уголовных преследованиях и защиты имущественных интересов клиентов от рейдерских захватов.</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </section>
+    {% include "partials/_clients.html" %}
+  </main>
+  {% include "partials/_footer.html" %}
+{% endblock %}

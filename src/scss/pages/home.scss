@@ -64,9 +64,11 @@
 .polis-card {
   width: 100%;
   height: size(400, 209);
-  perspective: 2000px;
-  &:hover .polis-card__content {
-    transform: rotateY(180deg);
+  @include media('>#{$br2}') {
+    perspective: 2000px;
+    &:hover .polis-card__content {
+      transform: rotateY(180deg);
+    }
   }
 }
 

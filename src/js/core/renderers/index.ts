@@ -5,3 +5,7 @@ export const home = (): Promise<any> => {
 export const polis = (): Promise<any> => {
   return import(/* webpackChunkName: "polis" */ './Polis')
 }
+
+export const service = (): Promise<any> => {
+  return import(/* webpackChunkName: "service" */ './Service')
+}
