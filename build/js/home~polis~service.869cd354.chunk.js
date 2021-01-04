@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["home~polis"],{"./src/js/components/clients.ts":
+(window.webpackJsonp=window.webpackJsonp||[]).push([["home~polis~service"],{"./src/js/components/clients.ts":
 /*!**************************************!*\
   !*** ./src/js/components/clients.ts ***!
   \**************************************/

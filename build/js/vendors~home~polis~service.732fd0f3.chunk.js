@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["vendors~home~polis"],{"./node_modules/scrollbooster/src/index.js":
+(window.webpackJsonp=window.webpackJsonp||[]).push([["vendors~home~polis~service"],{"./node_modules/scrollbooster/src/index.js":
 /*!*************************************************!*\
   !*** ./node_modules/scrollbooster/src/index.js ***!
   \*************************************************/
