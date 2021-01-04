@@ -116,6 +116,40 @@
         </div>
       </div>
     </section>
+    <section class='section section--dark services-instruction'>
+      <div class='container section__container a-center last'>
+        {% include "partials/_polis-slider.html" %}
+      </div>
+    </section>
+    <section class='section get-polis'>
+      <div class='container section__container a-center'>
+        <h2 class="h2">Получить адвокатский полис</h2>
+        <span class="section__line"></span>
+        <p class="section-text">Оформите заявку на выпуск полиса прямо сейчас, и получите именную карту-полис на протяжении 7 дней</p>
+        <ul class="get-polis__items">
+          {% for i in range(0, 3) -%}
+            <li class="get-polis__item">
+              <div class="get-polis__item-left">
+                <div class="polis-card">
+                  <div class="polis-card__content">
+                    <img class="polis-card__img polis-card__img--main" src="./img/polis-card.png" alt="card">
+                    <img class="polis-card__img polis-card__img--alternate" src="./img/polis-2.png" alt="card">
+                  </div>
+                </div>
+              </div>
+              <div class="get-polis__item-right">
+                <h4 class="get-polis__item-h">STANDART</h4>
+                <p class="get-polis__item-text">Пластиковая именная карта-полис "STANDART" Этот текст для теста, тут будет что-то в тему и поважнее</p>
+                <div class="get-polis__item-order">
+                  <button class="btn btn--black get-polis__btn">Оформить заявку</button>
+                  <span class="get-polis__price">6 700 грн / год</span>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
     {% include "partials/_clients.html" %}
   </main>
   {% include "partials/_footer.html" %}

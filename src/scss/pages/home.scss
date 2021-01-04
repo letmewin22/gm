@@ -1,7 +1,6 @@
 .home-header {
   color: white;
   height: 100vh;
-  height: var(--vh);
   position: relative;
 }
 
@@ -60,13 +59,18 @@
 
 .polis-section__container-right {
   width: 100%;
+}
+
+.polis-card {
+  width: 100%;
+  height: size(400, 209);
   perspective: 2000px;
-  &:hover .polis-card {
+  &:hover .polis-card__content {
     transform: rotateY(180deg);
   }
 }
 
-.polis-card {
+.polis-card__content {
   position: relative;
   transition: transform 1s ease;
   transform-style: preserve-3d;

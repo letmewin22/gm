@@ -28,14 +28,14 @@ export class Nav {
     this.$nav.classList.add('open')
     this.$burger.classList.add('active')
     this.isOpen = true
-    document.body.classList.add('e-fixed')
+    document.body.classList.add('gm-fixed')
   }
 
   close(): void {
     this.$nav.classList.remove('open')
     this.$burger.classList.remove('active')
     this.isOpen = false
-    document.body.classList.remove('e-fixed')
+    document.body.classList.remove('gm-fixed')
   }
 
   destroy(): void {

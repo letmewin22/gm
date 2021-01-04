@@ -65,8 +65,10 @@
         </div>
         <div class="polis-section__container-right">
           <div class="polis-card">
-            <img class="polis-card__img polis-card__img--main" src="./img/polis-card.png" alt="card">
-            <img class="polis-card__img polis-card__img--alternate" src="./img/polis-2.png" alt="card">
+            <div class="polis-card__content">
+              <img class="polis-card__img polis-card__img--main" src="./img/polis-card.png" alt="card">
+              <img class="polis-card__img polis-card__img--alternate" src="./img/polis-2.png" alt="card">
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +91,7 @@
         </div>
       </div>
     </section>
-  {% include "partials/_clients.html" %}
+    {% include "partials/_clients.html" %}
   </main>
   {% include "partials/_footer.html" %}
 {% endblock %}
