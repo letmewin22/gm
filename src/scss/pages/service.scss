@@ -97,6 +97,9 @@
       .specialists__item-photo {
         grid-column-start: 2;
         grid-column-end: 2;
+        img {
+          float: right;
+        }
       }
       .specialists__item-content {
         grid-column-start: 1;
@@ -112,7 +115,6 @@
 .specialists__item-photo {
   img {
     max-width: 100%;
-    float: right;
     display: block;
     @include media('<=1500px') {
       object-fit: cover;

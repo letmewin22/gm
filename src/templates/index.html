@@ -15,6 +15,9 @@
     </div>
   </header>
   <main>
+  
+    
+  
     <section class='section services-section'>
       <div class='container section__container a-center'>
         <h2 class="h2">Чем мы можем помочь?</h2>
@@ -22,14 +25,14 @@
         <p class="section__text">Наша работа — разобраться в вашей ситуации с юридической точки зрения, чтобы предпринять законные действия для решения проблемы любой сложности.</p>
         <div class="cards services-section__cards">
           {% for i in range(0, 6) -%}
-            <a href="./service" class="card services-section__card">
+            <a data-show-items href="./service" class="card services-section__card {% if i < 3 %}visible{% endif %}">
               <div class="card__icon services-section__card-icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
               <h3 class="h3 card__h services-section__card-h">Защита в уголовных процессах</h3>
               <p class="card__text services-section__card-text">Адвокаты АО «Г.М. Партнерс» помогают решить семейные и наследственные вопросы в судебном и досудебном порядке. Знание законодательства, психологии и стратегии...</p>
             </a>
           {% endfor %}
         </div>
-        <button class="btn btn--black services-section__view-more">Больше услуг</button>
+        <button data-show-text="Больше услуг" data-hide-text="Свернуть" data-show-more class="btn btn--black services-section__view-more">Больше услуг</button>
       </div>
     </section>
     <section class='section section--dark advantages'>

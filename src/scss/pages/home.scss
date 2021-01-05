@@ -28,8 +28,12 @@
 }
 .services-section__card {
   transition: background-color 0.4s ease;
+  display: none;
   &:hover {
     background-color: #f4f4f4;
+  }
+  &.visible {
+    display: flex;
   }
 }
 

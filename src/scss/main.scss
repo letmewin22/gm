@@ -25,13 +25,22 @@ button {
   background-color: transparent;
 }
 
-.section,
-.footer {
+.section {
   --color: var(--black);
   &--dark {
     --color: white;
     background-image: url('../img/dark-pattern.jpg');
     @include cover;
+    color: var(--color);
+    margin-top: size(100, 60);
+  }
+}
+
+.footer {
+  --color: var(--black);
+  &--dark {
+    --color: white;
+    background-color: var(--black);
     color: var(--color);
     margin-top: size(100, 60);
   }
