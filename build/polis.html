@@ -14,7 +14,7 @@
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/sylfaen.woff2" type="font/woff" as="font" crossorigin="anonymous">
     <!-- BEGIN styles -->
-    <link rel="stylesheet" media="all" href="css/app.e1609839853324.css">
+    <link rel="stylesheet" media="all" href="css/app.e1609918214347.css">
     <!-- END styles -->
   </head>
   <body class="loading">
@@ -31,7 +31,24 @@
     </div>
     <div class="navbar">
       <div class="container navbar__container">
-        <a href="/" class="logo navbar__logo"><img src="./img/logo.svg" alt="logo"></a>
+        <div class="navbar__left">
+          <a href="/" aria-label="logo" class="logo navbar__logo">
+            <img class="logo__desc" src="./img/logo.svg" alt="logo">
+            <img class="logo__mob" src="./img/logo-mob.svg" alt="logo">
+          </a>
+          <div class="navbar__lang dropdown">
+            <div class="dropdown__btn"><span class="navbar__lang-current">Ru</span> <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6561 1L6.65607 6L1.65607 1" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <div class="dropdown__content navbar__lang-content">
+              <div class="dropdown__links">
+                <a class="dropdown__link navbar__lang-link" href="./service">En</a>
+                <a class="dropdown__link navbar__lang-link" href="./service">Ua</a>
+                <a class="dropdown__link navbar__lang-link" href="./service">Ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
           <ul class="navbar__ul">
             <li class="navbar__li dropdown">
@@ -70,7 +87,7 @@
       <div class="navbar__mobile-nav"></div>
     </div>
     <div class="site-wrapper" data-router-wrapper>
-      <div data-router-view="polis">
+      <div data-current-lang="Ru" data-translate-urls="http:/localhost:8080,http:/localhost:60" data-router-view="polis">
         <header class="polis-header">
           <div class="polis-header__bg" style="background-image: url('./img/polis-bg.png')"></div>
           <div class="container polis-header__container a-center">
@@ -448,7 +465,7 @@
     <!-- BEGIN scripts -->
     <script src="./js/runtime-app.37467189.js"></script>
     <script src="./js/vendors~app.a988cb20.chunk.js"></script>
-    <script src="./js/app.8c55d33a.chunk.js"></script>
+    <script src="./js/app.fada3288.chunk.js"></script>
     <!-- END scripts -->
   </body>
 </html>
