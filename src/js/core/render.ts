@@ -9,6 +9,7 @@ import {winH} from '@/utils/winH'
 import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
 import {Loader} from '@/components/loaders/Loader'
+import {lang} from '@/components/lang'
 
 export const render = <T>(H: T): void => {
   const hooks = new Hooks(H)
@@ -51,6 +52,7 @@ export const render = <T>(H: T): void => {
       URL: 'http://localhost:8080/api/mail.php'
     })
 
+    lang()
     links.forEach((link: HTMLLinkElement) => {
       link.classList.remove('is-active')
       link.href === location.href && link.classList.add('is-active')
