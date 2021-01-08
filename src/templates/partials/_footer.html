@@ -1,7 +1,12 @@
-  <footer class="footer footer--dark">
-    <div class="container footer__container">
+<footer class="footer footer--dark">
+  <div class="container footer__container">
+    <div class="container__left">
+      <h2 class="h2 footer__h2">Записаться на консультацию</h2>
+      <div class="section__line"></div>
+      <p class="footer__text">Опишите суть вопроса и мы свяжемся с Вами в ближайшее время для записи на консультацию</p>
+    </div>
+    <div class="container__right">
       <form id="form" class="form" novalidate>
-        <h2 class="h2 form__h2">Записаться на консультацию</h2>
         <div class="input-container form__input-container">
           <input 
           data-input 
@@ -9,7 +14,7 @@
           name="Name" 
           id="name"
           >
-          <label class="label form__label" for="name">Ваше имя:</label>
+          <label class="label form__label" for="name">Ваше имя</label>
         </div>
         <div class="input-container form__input-container">
           <input 
@@ -20,7 +25,7 @@
           name="Phone" 
           id="tel"
           >
-          <label class="label form__label" for="tel">Ваш телефон:</label>
+          <label class="label form__label" for="tel">Ваш телефон</label>
           <div class="input-validate form__input-validate">Некорректный номер</div>
         </div>
         <div class="input-container form__input-container">
@@ -32,7 +37,7 @@
           name="Message" 
           id="text"
           ></textarea>
-          <label class="label form__label" for="adress">Опишите суть вопроса и мы свяжемся с Вами в ближайшее время для записи на консультацию:</label>
+          <label class="label form__label" for="adress">Опишите суть вопроса</label>
           <div data-length class="length-counter form__length-counter">1000</div>
           <div class="input-validate form__input-validate">Превышена максимальная длина</div>
         </div>
@@ -50,13 +55,28 @@
         </button>
         <small class="form__policy">Нажимая отправить вы соглашаетесь с условиями обработки персональных данных</small>
       </form>
-      <div class="footer__bottom">
-        <div class="footer__bottom-left">
-          <a href="/" class="logo footer__logo"><img src="./img/logo.svg" alt="logo"></a>
-          <div class="footer__bottom-id">Адвокатское объеденение "Г.М. Партнерс" Идентификационный код юридического лица 42308793</div>
-          <a href='#' class="footer__bottom-privacy">«Политика конфиденциальности и адвокатская тайна»</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-container">
+      <div class="footer__bottom-content">
+        <div class="footer__bottom-content-left">
+          <a href="/" aria-label="logo" class="footer__logo">
+            <img src="./img/logo-footer.svg" alt="logo">
+          </a>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="#">instagram</a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#">facebook</a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#">telegram</a>
+            </li>
+          </ul>
         </div>
-        <div class="footer__bottom-right">
+        <div class="footer__bottom-content-right">
           <div class="footer__bottom-contacts">
             <div class="footer__bottom-contacts-icon">
               <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,18 +104,14 @@
               </li>
             </ul>
           </div>
-          <ul class="footer__bottom-social">
-            <li class="footer__bottom-social-item">
-              <a href="#">{% include "partials/svg/_instagram.html" %}</a>
-            </li>
-            <li class="footer__bottom-social-item">
-              <a href="#">{% include "partials/svg/_facebook.html" %}</a>
-            </li>
-            <li class="footer__bottom-social-item">
-              <a href="#">{% include "partials/svg/_telegram.html" %}</a>
-            </li>
-          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom-info">
+        <div class="footer__bottom-info-content">
+          <p class="footer__bottom-id">Адвокатское объеденение "Г.М. Партнерс"<br>ИКЮЛ: 42308793</p>
+          <a href="#" class="footer__botom-privacy">«Политика конфиденциальности и адвокатская тайна»</a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>

@@ -4,22 +4,24 @@
 
 <div class="navbar">
   <div class="container navbar__container">
-  <div class="navbar__left">
-    <a href="/" aria-label="logo" class="logo navbar__logo">
-    <img class="logo__desc" src="./img/logo.svg" alt="logo">
-    <img class="logo__mob" src="./img/logo-mob.svg" alt="logo">
-    </a>
-    <div class="navbar__lang dropdown">
-          <div class="dropdown__btn"><span class="navbar__lang-current">Ru</span> {{chevron|safe}}</div>
-          <div class="dropdown__content navbar__lang-content">
-            <div class="dropdown__links">
-              <a class="dropdown__link navbar__lang-link" href="./service">En</a>
-              <a class="dropdown__link navbar__lang-link" href="./service">Ua</a>
-              <a class="dropdown__link navbar__lang-link" href="./service">Ru</a>
-            </div>
+    <div class="navbar__left">
+      <a href="/" aria-label="logo" class="logo navbar__logo">
+        <img class="logo__desc" src="./img/logo.svg" alt="logo">
+        <img class="logo__mob" src="./img/logo-mob.svg" alt="logo">
+      </a>
+      <div class="navbar__lang dropdown">
+        <div class="dropdown__btn">
+          <span class="navbar__lang-current">Ru</span>
+          {{chevron|safe}}</div>
+        <div class="dropdown__content navbar__lang-content">
+          <div class="dropdown__links">
+            <a class="dropdown__link navbar__lang-link" href="./service">En</a>
+            <a class="dropdown__link navbar__lang-link" href="./service">Ua</a>
+            <a class="dropdown__link navbar__lang-link" href="./service">Ru</a>
           </div>
         </div>
-  </div>
+      </div>
+    </div>
     <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
       <ul class="navbar__ul">
         <li class="navbar__li dropdown">
@@ -42,8 +44,12 @@
           </svg>
         </div>
         <ul class="navbar__contacts-items">
-          <li class="navbar__contacts-item"><a href="tel:+380730480000">+38 (073) 048 0000</a></li>
-          <li class="navbar__contacts-item"><a href="mailto:inbox@g-m.partners">inbox@g-m.partners</a></li>
+          <li class="navbar__contacts-item">
+            <a href="tel:+380730480000">+38 (073) 048 0000</a>
+          </li>
+          <li class="navbar__contacts-item">
+            <a href="mailto:inbox@g-m.partners">inbox@g-m.partners</a>
+          </li>
         </ul>
       </div>
     </nav>
