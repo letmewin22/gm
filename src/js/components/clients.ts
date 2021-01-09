@@ -7,6 +7,7 @@ export interface IClients {
 
 export const clients = (): IClients => {
   const scrollthumb: HTMLElement = document.querySelector('.clients__thumb')
+  const scrollbar: HTMLElement = document.querySelector('.clients__scrollbar')
   const draggableItems: HTMLElement = document.querySelector('.clients__items')
   const draggableWrapper: HTMLElement = document.querySelector(
     '.clients__items-wrapper'
@@ -16,7 +17,7 @@ export const clients = (): IClients => {
 
   const dragable = () => {
     if (draggableItems.scrollWidth !== draggableItems.offsetWidth) {
-      scrollthumb.style.display = 'block'
+      scrollbar.style.display = 'block'
       draggableWrapper.classList.add('active')
 
       sc = new ScrollBooster({
@@ -43,7 +44,7 @@ export const clients = (): IClients => {
   return {
     destroy() {
       resize.off(dragable)
-      sc.destroy()
+      sc && sc.destroy()
     }
   }
 }

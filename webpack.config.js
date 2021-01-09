@@ -28,7 +28,7 @@ function createConfig(env) {
         ? '[name].[contenthash:8].chunk.js'
         : '[name].chunk.js',
       path: path.resolve(__dirname, 'build/js/'),
-      publicPath: './js/'
+      publicPath: '/js/'
     },
     resolve: {
       extensions: ['.js', '.ts'],
