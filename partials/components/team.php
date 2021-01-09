@@ -25,7 +25,7 @@
                 $my_query->the_post();
           ?>
             <li class="team__item">
-              <div class="team__item-photo"><img src="<?php echo get_field('фото_участника_команды'); ?>"
+              <div class="team__item-photo"><img src="<?php echo get_field('аватарка_участника_команды'); ?>"
                   alt="portrait"></div>
               <h4 class="h4 team__item-h"><?php the_title(); ?></h4>
               <span class="team__item-pos"><?php echo get_field('должность_участника_команды'); ?></span>
