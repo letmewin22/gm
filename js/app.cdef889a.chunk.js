@@ -14,7 +14,7 @@
 /*!***********************************!*\
   !*** ./src/js/components/lang.ts ***!
   \***********************************/
-/*! exports provided: lang */function(e,t,n){"use strict";n.r(t),n.d(t,"lang",(function(){return s}));var s=function(){var e=document.querySelector(".navbar__lang-current"),t=document.querySelectorAll(".navbar__lang-link"),n=document.querySelector("[data-translate-urls]"),s=n.dataset.translateUrls.split(",");console.log(s);var r=n.dataset.currentLang;e.innerText=r,t.forEach((function(e,t){e.innerHTML.toLowerCase()!==r.toLowerCase()?e.setAttribute("href",s[t]):e.classList.add("is-active")}))}},"./src/js/components/loaders/Loader.ts":
+/*! exports provided: lang */function(e,t,n){"use strict";n.r(t),n.d(t,"lang",(function(){return s}));var s=function(){var e=document.querySelector(".navbar__lang-current"),t=document.querySelectorAll(".navbar__lang-link"),n=document.querySelector("[data-translate-urls]"),s=n.dataset.translateUrls.split(","),r=n.dataset.currentLang;e.innerText=r,t.forEach((function(e,t){e.innerHTML.toLowerCase()!==r.toLowerCase()?e.setAttribute("href",s[t]):e.classList.add("is-active")}))}},"./src/js/components/loaders/Loader.ts":
 /*!*********************************************!*\
   !*** ./src/js/components/loaders/Loader.ts ***!
   \*********************************************/

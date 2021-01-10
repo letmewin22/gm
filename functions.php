@@ -24,6 +24,91 @@ function webp_upload_mimes( $existing_mimes ) {
 add_filter( 'mime_types', 'webp_upload_mimes' );
 
 
+function mytheme_customize_register( $wp_customize ) {
+	/*
+	Добавляем секцию в настройки темы
+	*/
+
+	$wp_customize->add_section(
+		'data_site_section',
+		array(
+			'title' => 'Контакты компании',
+			'capability' => 'edit_theme_options',
+			'description' => "Укажите данные вашей компании"
+		)
+	);
+
+	$company_data = array(
+		array(
+			'settings_name' => 'company_tel',
+			'type' => 'text',
+			'label' => 'Номер телефона, который будет на сайте'
+		),
+		array(
+			'settings_name' => 'company_email',
+			'type' => 'text',
+			'label' => 'E-mail, который будет на сайте'
+		),
+		array(
+			'settings_name' => 'company_instagram',
+			'type' => 'text',
+			'label' => 'Ссылка на ваш аккаунт в инстаграм'
+		),
+		array(
+			'settings_name' => 'company_facebook',
+			'type' => 'text',
+			'label' => 'Ссылка на ваш аккаунт в фейсбук'
+		),
+		array(
+			'settings_name' => 'company_telegram',
+			'type' => 'text',
+			'label' => 'Ваш логин в телеграм без "@"'
+		),
+		array(
+			'settings_name' => 'company_adress_ru',
+			'type' => 'textarea',
+			'label' => 'Адресс компании на русском'
+		),
+		array(
+			'settings_name' => 'company_adress_uk',
+			'type' => 'textarea',
+			'label' => 'Адресс компании на украинском'
+		),
+		array(
+			'settings_name' => 'company_adress_en',
+			'type' => 'textarea',
+			'label' => 'Адресс компании на английском'
+		),
+		array(
+			'settings_name' => 'company_adress_maps',
+			'type' => 'textarea',
+			'label' => 'Ссылка на гугл карты'
+		)
+	);
+
+	foreach ($company_data as $section) {
+			$wp_customize->add_setting(
+				$section['settings_name'],
+				array(
+					'default' => '',
+					'type' => 'option'
+				)
+			);
+		
+			$wp_customize->add_control(
+				$section['settings_name'].'_control',
+				array(
+					'type' => $section['type'],
+					'label' => $section['label'],
+					'section' => 'data_site_section',
+					'settings' => $section['settings_name']
+				)
+			);
+	}
+}
+	add_action( 'customize_register', 'mytheme_customize_register' );
+
+
 
 function onwp_disable_content_editor() {
 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;

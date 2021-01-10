@@ -5,7 +5,8 @@
     <?php   
             $args = array(
               'post_type' => 'advantages',
-              'posts_per_page' => 6
+              'posts_per_page' => 6,
+              'order' => 'ASC'
             );    
             $my_query = new WP_Query( $args ); 
             if ( $my_query->have_posts() ) {

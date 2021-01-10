@@ -4,20 +4,20 @@
 <html lang="<?php echo translateRuUaEn('ru', 'uk', 'en');?>" class="custom">
 <head>
   <meta charset="utf-8">
-  <title>Title</title>
+  <title><?php echo get_field('title'); ?></title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#393D5D">
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicons/favicon.ico" type="image/x-icon">
-  <meta name="description" content=" ">
-  <meta property="og:title" content=" ">
-  <meta property="og:description" content=" ">
+  <meta name="description" content="<?php echo get_field('description'); ?>">
+  <meta property="og:title" content="<?php echo get_field('title'); ?>">
+  <meta property="og:description" content="<?php echo get_field('description'); ?>">
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/Montserrat-Bold.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/Montserrat-Regular.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/Montserrat-Medium.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/sylfaen.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <!-- BEGIN styles -->
-  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/app.e1610193186441.css">
+  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/app.e1610276801746.css">
   <!-- END styles -->
 </head>
 

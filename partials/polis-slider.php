@@ -1,20 +1,33 @@
 <div class="services-instruction__slider-wrapper">
   <div data-img="-1" class="services-instruction__slider">
     <div data-img="1" class="services-instruction__slides">
-      {% for i in range(0, 2) -%}
+    <?php   
+        $args = array(
+          'post_type' => 'polis_slider',
+          'posts_per_page' => 10
+        );    
+        $my_query = new WP_Query( $args ); 
+          if ( $my_query->have_posts() ) {
+            while ( $my_query->have_posts() ) {
+              $my_query->the_post();
+    ?>
         <div data-slide class="services-instruction__slide">
           <div class="services-instruction__slide-content">
             <div class="services-instruction__slide-content-left">
-              <h3 class="h3">"Поговорите с моим адвокатом"</h3>
+              <h3 class="h3"><?php the_title(); ?></h3>
               <span class="section__line"></span>
-              <p class="services-instruction__text">Это услуга, предоставляющая владельцам "Адвокатского полиса" право передачи телефона третьим лицам или представителям правоохранительных органов с целью правового урегулирования возникших конфликтных ситуаций.</p>
+              <p class="services-instruction__text"><?php echo get_field('описание_в_слайде'); ?></p>
             </div>
             <div class="services-instruction__slide-content-right">
-              <img src="./img/polis/1.png" alt="" class="services-instruction__img">
+              <img src="<?php echo get_field('изображение'); ?>" alt="" class="services-instruction__img">
             </div>
           </div>
         </div>
-      {% endfor %}
+        <?php             
+              }            
+            }       
+            wp_reset_postdata();             
+          ?>
     </div>
   </div>
   <nav data-i class="services-instruction__slider-nav">

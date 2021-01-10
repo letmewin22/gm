@@ -17,7 +17,8 @@
     <?php   
             $args = array(
               'post_type' => 'team',
-              'posts_per_page' => 20
+              'posts_per_page' => 20,
+              'order' => 'ASC'
             );    
             $my_query = new WP_Query( $args ); 
             if ( $my_query->have_posts() ) {

@@ -25,7 +25,15 @@
     <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
       <ul class="navbar__ul">
         <li class="navbar__li dropdown">
-          <div class="dropdown__btn">Услуги <?php echo $chevron; ?></div>
+          <div class="dropdown__btn">
+          <?php echo translateRuUaEn(
+                'Услуги', 
+                'Послуги', 
+                'Services'
+          ); 
+            ?>
+          <?php echo $chevron; ?>
+          </div>
           <div class="dropdown__content">
             <div class="dropdown__links">
             <?php   
@@ -48,7 +56,14 @@
           </div>
         </li>
         <li class="navbar__li">
-          <a href="<?php echo get_site_url()?>/polis">Полис</a>
+          <a href="<?php echo get_site_url()?>/<?php echo translateRuUaEn('polis','polis-ua','polis-en');?>">
+          <?php echo translateRuUaEn(
+                'Полис', 
+                'Поліс', 
+                'Polis'
+          );
+          ?>
+          </a>
         </li>
       </ul>
       <div class="navbar__contacts">
@@ -59,10 +74,12 @@
         </div>
         <ul class="navbar__contacts-items">
           <li class="navbar__contacts-item">
-            <a href="tel:+380730480000">+38 (073) 048 0000</a>
+            <a href="tel:<?php echo preg_replace('/\D+/', '', get_option('company_tel')); ?>">
+              <?php echo get_option('company_tel');?>
+            </a>
           </li>
           <li class="navbar__contacts-item">
-            <a href="mailto:inbox@g-m.partners">inbox@g-m.partners</a>
+            <a href="mailto:inbox@g-m.partners"><?php echo get_option('company_email');?></a>
           </li>
         </ul>
       </div>

@@ -11,7 +11,8 @@ get_header();
     <p data-i class="service-header__desc">Наши адвокаты обеспечат надежную и эффективную правовую помощь как на стадии
       следствия, так и в судебном производстве, анализируя каждую деталь и используя максимум возможностей для
       определения наилучшей стратегии защиты</p>
-    <a data-i href="#" class="btn btn--white service-header__btn">Получить консультацию
+    <a data-i href="#" class="btn btn--white service-header__btn">
+      <?php echo get_field('текст_кнопки_на_первом_экране'); ?>
       <span class="arrow"><?php include get_theme_file_path( './partials/svg/arrow.php' ); ?></span>
     </a>
   </div>

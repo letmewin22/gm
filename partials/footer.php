@@ -1,9 +1,19 @@
+<?php   
+  $args = array(
+    'post_type' => 'footer',
+    'posts_per_page' => 1
+  );    
+  $my_query = new WP_Query( $args ); 
+    if ( $my_query->have_posts() ) {
+      while ( $my_query->have_posts() ) {
+        $my_query->the_post();
+  ?>
 <footer class="footer footer--dark">
   <div class="container footer__container">
     <div class="container__left">
-      <h2 class="h2 footer__h2">Записаться на консультацию</h2>
+      <h2 class="h2 footer__h2"><?php echo get_field('заголовок_футер'); ?></h2>
       <div class="section__line"></div>
-      <p class="footer__text">Опишите суть вопроса и мы свяжемся с Вами в ближайшее время для записи на консультацию</p>
+      <p class="footer__text"><?php echo get_field('текст_футер'); ?></p>
     </div>
     <div class="container__right">
       <form id="form" class="form" novalidate>
@@ -14,7 +24,14 @@
           name="Name" 
           id="name"
           >
-          <label class="label form__label" for="name">Ваше имя</label>
+          <label class="label form__label" for="name">
+            <?php echo translateRuUaEn(
+                'Ваше имя', 
+                'Ваше ім\'я', 
+                'Your name'
+              ); 
+            ?>
+          </label>
         </div>
         <div class="input-container form__input-container">
           <input 
@@ -25,8 +42,22 @@
           name="Phone" 
           id="tel"
           >
-          <label class="label form__label" for="tel">Ваш телефон</label>
-          <div class="input-validate form__input-validate">Некорректный номер</div>
+          <label class="label form__label" for="tel">
+            <?php echo translateRuUaEn(
+                'Ваш телефон', 
+                'Ваш телефон', 
+                'Your phone'
+              ); 
+            ?>
+          </label>
+          <div class="input-validate form__input-validate">
+            <?php echo translateRuUaEn(
+                  'Некорректный номер', 
+                  'Некоректний номер', 
+                  'Incorrect phone'
+                ); 
+            ?>
+          </div>
         </div>
         <div class="input-container form__input-container">
           <textarea 
@@ -36,15 +67,43 @@
           name="Message" 
           id="text"
           ></textarea>
-          <label class="label form__label" for="text">Опишите суть вопроса</label>
+          <label class="label form__label" for="text">
+          <?php echo translateRuUaEn(
+                'Опишите суть вопроса', 
+                'Опишіть суть питання', 
+                'Your question'
+              );
+            ?>
+          </label>
           <div data-length class="length-counter form__length-counter">1000</div>
-          <div class="input-validate form__input-validate">Превышена максимальная длина</div>
+          <div class="input-validate form__input-validate">
+          <?php echo translateRuUaEn(
+                'Превышена максимальная длина', 
+                'Перевищена максимальна довжина', 
+                'Exceeded maximum length'
+              );
+            ?>
+          </div>
         </div>
         <div data-error class="form__error-message">
-          <div class="form__error-message-text">Произошла ошибка. Попробуйте ещё раз</div>
+          <div class="form__error-message-text">
+          <?php echo translateRuUaEn(
+                'Произошла ошибка. Попробуйте ещё раз', 
+                'Виникла помилка. Спробуйте ще раз', 
+                'An error has occurred. Try again'
+              );
+            ?>
+          </div>
         </div>
         <button class="btn btn--black form__btn">
-          <span class="form__btn-text">Получить консультацию</span>
+          <span class="form__btn-text">
+            <?php echo translateRuUaEn(
+                  'Получить консультацию', 
+                  'Отримати консультацію', 
+                  'To get a consultation'
+                );
+            ?>
+          </span>
           <span class="btn__overlay"></span>
           <span class="form__btn-loader">
             <svg class="circular" viewBox="25 25 50 50">
@@ -52,7 +111,14 @@
             </svg>
           </span>
         </button>
-        <small class="form__policy">Нажимая отправить вы соглашаетесь с условиями обработки персональных данных</small>
+        <small class="form__policy">
+          <?php echo translateRuUaEn(
+                    'Нажимая отправить вы соглашаетесь с условиями обработки персональных данных', 
+                    'Натискаючи відправити ви погоджуєтеся з умовами обробки персональних даних', 
+                    'By clicking send you agree to the terms of processing personal data'
+                  );
+          ?>
+        </small>
       </form>
     </div>
   </div>
@@ -65,13 +131,31 @@
           </a>
           <ul class="footer__social">
             <li class="footer__social-item">
-              <a href="#">instagram</a>
+              <a 
+              target='_blank' 
+              rel='noopener noreferrer' 
+              href="<?php echo get_option('company_instagram');?>"
+              >
+              instagram
+              </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">facebook</a>
+              <a 
+              target='_blank' 
+              rel='noopener noreferrer' 
+              href="<?php echo get_option('company_facebook');?>"
+              >
+              facebook
+              </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">telegram</a>
+              <a 
+              target='_blank' 
+              rel='noopener noreferrer' 
+              href="https://t.me/<?php echo get_option('company_telegram');?>"
+              >
+                telegram
+              </a>
             </li>
           </ul>
         </div>
@@ -84,13 +168,21 @@
             </div>
             <ul class="footer__bottom-contacts-items">
               <li class="footer__bottom-contacts-item">
-                <a href="tel:+380730480000">+38 (073) 048 0000</a>
+                <a href="tel:<?php echo preg_replace('/\D+/', '', get_option('company_tel')); ?>"><?php echo get_option('company_tel');?></a>
               </li>
               <li class="footer__bottom-contacts-item">
-                <a href="mailto:inbox@g-m.partners">inbox@g-m.partners</a>
+                <a href="mailto:inbox@g-m.partners"><?php echo get_option('company_email');?></a>
               </li>
             </ul>
           </div>
+          <?php $adress = translateRuUaEn(
+                  get_option('company_adress_ru'), 
+                  get_option('company_adress_uk'), 
+                  get_option('company_adress_en')
+                );
+
+                if($adress) {
+          ?>
           <div class="footer__bottom-contacts">
             <div class="footer__bottom-contacts-icon">
               <svg width="19" height="27" viewBox="0 0 19 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,18 +191,49 @@
             </div>
             <ul class="footer__bottom-contacts-items">
               <li class="footer__bottom-contacts-item">
-                <a href="tel:+380730480000">ул.Греческая 44, оф.101,<br>Одесса, Украина</a>
+                <a 
+                style="max-width:200px;" 
+                target='_blank' 
+                rel='noopener noreferrer' 
+                href="<?php echo get_option('company_adress_maps') ?>"
+                >
+                <?php
+                  echo $adress;
+                ?>
+                </a>
               </li>
             </ul>
           </div>
+          <?php } ?>
         </div>
       </div>
       <div class="footer__bottom-info">
         <div class="footer__bottom-info-content">
-          <p class="footer__bottom-id">Адвокатское объеденение "Г.М. Партнерс"<br>ИКЮЛ: 42308793</p>
-          <a href="#" class="footer__botom-privacy">«Политика конфиденциальности и адвокатская тайна»</a>
+          <p class="footer__bottom-id">
+          <?php 
+            echo translateRuUaEn(
+              'Адвокатское объеденение "Г.М. Партнерс"<br>ИКЮЛ: 42308793', 
+              'Адвокатське об\'єднання "Г.М. Партнерс"<br>ІКЮО: 42308793', 
+              'Bar Association "G.M. Partners"<br>LEIC: 42308793'
+            );
+          ?>
+          </p>
+          <a href="#" class="footer__botom-privacy">
+          <?php 
+            echo translateRuUaEn(
+              '«Политика конфиденциальности и адвокатская тайна»', 
+              '«Політика конфіденційності та адвокатська таємниця»', 
+              '"Privacy Policy and Advocate Secrecy"'
+            );
+          ?>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+<?php             
+  }            
+}       
+wp_reset_postdata();             
+?> 
