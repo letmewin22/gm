@@ -41,7 +41,7 @@ export class ShowMore {
           item.classList.remove('visible')
         })
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 6; i++) {
           gsap.to(this.items[i], {duration: 0.5, opacity: 1})
           this.items[i].classList.add('visible')
         }

@@ -113,10 +113,7 @@ textarea {
   outline: none;
   padding-top: 10px;
   ~ .label {
-    top: 42px;
-    @include media('<=#{$br2}') {
-      top: 35%;
-    }
+    top: 25px;
   }
   @include media('<=#{$br2}') {
     min-height: 13rem;

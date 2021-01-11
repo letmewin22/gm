@@ -217,20 +217,25 @@
   margin-top: size(52, 36);
 }
 .get-polis__item {
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   + .get-polis__item {
     margin-top: size(44, 32);
   }
   @include media('<=#{$br2}') {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: start;
+    grid-gap: 0px;
   }
 }
 
 .get-polis__item-left {
-  width: 100%;
+  @include media('<=#{$br2}') {
+    width: 100%;
+  }
 }
 
 .get-polis__item-right {

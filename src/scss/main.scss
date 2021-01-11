@@ -29,7 +29,7 @@ button {
   --color: var(--black);
   &--dark {
     --color: white;
-    background-image: url('../img/dark-pattern.jpg');
+    background-image: url('../img/dark-pattern.svg');
     @include cover;
     color: var(--color);
     margin-top: size(100, 60);

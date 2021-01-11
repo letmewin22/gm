@@ -9,7 +9,7 @@
     <div class="home-header__bg" style="background-image: url('./img/home/bg.jpg')"></div>
     <div class="container home-header__container a-center">
       <h1 data-i class="h1 home-header__h1">Юридические услуги: для бизнеса, госслужащих и&nbsp;частных лиц. Защищаем интересы и&nbsp;выигрываем суды </h1>
-      <a data-i href="#" class="btn btn--white home-header__btn">Получить консультацию 
+      <a data-i data-href="#footer" href="#" class="btn btn--white home-header__btn">Получить консультацию 
         <span class="arrow">{% include "partials/svg/_arrow.html" %}</span>
       </a>
     </div>
@@ -21,8 +21,8 @@
         <span class="section__line"></span>
         <p class="section__text">Наша работа — разобраться в вашей ситуации с юридической точки зрения, чтобы предпринять законные действия для решения проблемы любой сложности.</p>
         <div class="cards services-section__cards">
-          {% for i in range(0, 6) -%}
-            <a data-show-items href="./service" class="card services-section__card {% if i < 3 %}visible{% endif %}">
+          {% for i in range(0, 12) -%}
+            <a data-show-items href="./service" class="card services-section__card {% if i < 6 %}visible{% endif %}">
               <div class="card__icon services-section__card-icon"><img src="./img/icons/services/1.svg" alt="icon"></div>
               <h3 class="h3 card__h services-section__card-h">Защита в уголовных процессах</h3>
               <p class="card__text services-section__card-text">Адвокаты АО «Г.М. Партнерс» помогают решить семейные и наследственные вопросы в судебном и досудебном порядке. Знание законодательства, психологии и стратегии...</p>
@@ -61,7 +61,7 @@
           <h2 class="h2">Адвокатский полис</h2>
           <span class="section__line"></span>
           <p class="section__text">Жизнь в современном обществе периодически требует неотложной квалифицированной юридической помощи адвоката. Адвокатские полисы АО «G.M. Partners» обеспечивают незамедлительное вмешательство наших адвокатов в неотложных жизненных ситуациях.</p>
-          <a href="#" class="btn btn--black polis-section__btn">Подробнее</a>
+          <a href="./polis" class="btn btn--black polis-section__btn">Подробнее</a>
         </div>
         <div class="polis-section__container-right">
           <div class="polis-card">

@@ -7,7 +7,6 @@ export const lang = (): void => {
     '[data-translate-urls]'
   )
   const translateUrls = translateUrlNode.dataset.translateUrls.split(',')
-  console.log(translateUrls)
   const currentLang = translateUrlNode.dataset.currentLang
 
   langBtn.innerText = currentLang

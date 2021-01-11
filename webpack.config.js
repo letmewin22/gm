@@ -21,14 +21,14 @@ function createConfig(env) {
   const webpackConfig = {
     entry: {
       app: path.resolve(__dirname, 'src/js/app.ts')
-    }, // If you need support IE11
+    },
     output: {
       filename,
       chunkFilename: isProduction
         ? '[name].[contenthash:8].chunk.js'
         : '[name].chunk.js',
       path: path.resolve(__dirname, 'build/js/'),
-      publicPath: '/js/'
+      publicPath: '/wp-content/themes/gm/js/' //'/wp-content/themes/gm/'
     },
     resolve: {
       extensions: ['.js', '.ts'],

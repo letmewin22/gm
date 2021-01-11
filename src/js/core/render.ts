@@ -10,6 +10,7 @@ import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
 import {Loader} from '@/components/loaders/Loader'
 import {lang} from '@/components/lang'
+import {anchors} from '@/components/Anchors'
 
 export const render = <T>(H: T): void => {
   const hooks = new Hooks(H)
@@ -57,5 +58,6 @@ export const render = <T>(H: T): void => {
       link.classList.remove('is-active')
       link.href === location.href && link.classList.add('is-active')
     })
+    anchors()
   })
 }
