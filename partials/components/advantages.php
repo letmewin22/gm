@@ -1,5 +1,12 @@
 <div class='container section__container a-center last'>
-  <h2 class="h2"><?php echo translateRuUaEn('Наши преимущества', 'Наші переваги', 'Our advantages');?></h2>
+  <h2 class="h2"><?php 
+  if (get_field('заголовок_блока_с_преимуществами')) {
+    echo get_field('заголовок_блока_с_преимуществами');
+  } else {
+    echo translateRuUaEn('Наши преимущества', 'Наші переваги', 'Our advantages');
+  }
+  ?>
+  </h2>
   <span class="section__line"></span>
   <div class="cards advantages__cards">
     <?php   

@@ -17,7 +17,7 @@
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/Montserrat-Medium.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/sylfaen.woff2" type="font/woff" as="font" crossorigin="anonymous">
   <!-- BEGIN styles -->
-  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/app.e1610276801746.css">
+  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/app.e1610388770440.css">
   <!-- END styles -->
 </head>
 

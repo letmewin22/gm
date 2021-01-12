@@ -12,17 +12,17 @@ get_header();
       <h1 data-i class="h1 polis-header__h1"><?php echo get_field('заголовок_на_первом_экране'); ?></h1>
       <p data-i class="polis-header__desc"><?php echo get_field('описание_на_первом_экране'); ?></p>
       <div data-i class="polis-header__btns">
-        <a href="#" class="btn btn--white polis-header__btn">
+        <a data-href="#get-polis" href="#" class="btn btn--white polis-header__btn">
           <?php echo get_field('текст_кнопки_на_первом_экране'); ?>
         </a>
-        <a href="#" class="btn btn--white btn--oultine polis-header__btn">
+        <a data-href="#how-work" href="#" class="btn btn--white btn--oultine polis-header__btn">
           <?php echo get_field('текст_второй_кнопки_на_первом_экране'); ?>
         </a>
       </div>
     </div>
   </header>
   <main>
-    <section class='section how-work'>
+    <section id="how-work" class='section how-work'>
       <div class='container section__container a-center'>
         <h2 class="h2"><?php echo get_field('заголовок_на_экране_этапов_работы'); ?></h2>
         <span class="section__line"></span>
@@ -102,7 +102,7 @@ get_header();
         <?php include get_theme_file_path( './partials/polis-slider.php' ); ?>
       </div>
     </section>
-    <section class='section get-polis'>
+    <section id="get-polis" class='section get-polis'>
       <div class='container section__container a-center'>
         <h2 class="h2"><?php echo get_field('получить_адвокатский_полис_заголовок'); ?></h2>
         <span class="section__line"></span>
@@ -136,14 +136,14 @@ get_header();
                 <h4 class="get-polis__item-h"><?php echo $cards['заголовок_'.$i] ?></h4>
                 <p class="get-polis__item-text"><?php echo $cards['описание_'.$i] ?></p>
                 <div class="get-polis__item-order">
-                  <button class="btn btn--black get-polis__btn">
+                  <a data-href="#footer" href="#" class="btn btn--black get-polis__btn">
                   <?php echo translateRuUaEn(
                     'Оформить заявку', 
                     'Оформити заявку', 
                     'Make a request'
                     ); 
                 ?>
-                  </button>
+                  </a>
                   <span class="get-polis__price"><?php echo $cards['стоимость_'.$i] ?></span>
                 </div>
               </div>

@@ -7,11 +7,9 @@ get_header();
   <div class="service-header__bg"
     style="background-image: url('<?php echo get_template_directory_uri();?>/img/home/bg.jpg')"></div>
   <div class="container service-header__container a-center">
-    <h1 data-i class="h1 service-header__h1">Защита в уголовных процессах</h1>
-    <p data-i class="service-header__desc">Наши адвокаты обеспечат надежную и эффективную правовую помощь как на стадии
-      следствия, так и в судебном производстве, анализируя каждую деталь и используя максимум возможностей для
-      определения наилучшей стратегии защиты</p>
-    <a data-i href="#" class="btn btn--white service-header__btn">
+    <h1 data-i class="h1 service-header__h1"><?php the_title(); ?></h1>
+    <p data-i class="service-header__desc"><?php echo get_field('описание_услуги_на_первом_экране'); ?></p>
+    <a data-href="#footer" data-i href="#" class="btn btn--white service-header__btn">
       <?php echo get_field('текст_кнопки_на_первом_экране'); ?>
       <span class="arrow"><?php include get_theme_file_path( './partials/svg/arrow.php' ); ?></span>
     </a>
@@ -52,7 +50,7 @@ get_header();
   </section>
   <section class='section specialists'>
     <div class='container section__container a-center'>
-      <h2 class="h2">Профильный специалист</h2>
+      <h2 class="h2"><?php echo get_field('заголовок_блока_с_профильным_специалистом'); ?></h2>
       <span class="section__line"></span>
       <ul class="specialists__items">
         <?php

@@ -13,7 +13,7 @@ get_header();
     <div class="home-header__bg" style="background-image: url('<?php echo get_field('фоновая_картинка_на_первом_экране')['sizes']['2048x2048']; ?>)"></div>
     <div class="container home-header__container a-center">
       <h1 data-i class="h1 home-header__h1"><?php echo get_field('заголовок_на_первом_экране'); ?></h1>
-      <a data-i href="#" class="btn btn--white home-header__btn"><?php echo get_field('текст_кнопки_на_первом_экране'); ?>
+      <a data-href="#footer" data-i href="#" class="btn btn--white home-header__btn"><?php echo get_field('текст_кнопки_на_первом_экране'); ?>
         <span class="arrow"><?php include get_theme_file_path( './partials/svg/arrow.php' ); ?></span>
       </a>
     </div>
@@ -28,7 +28,8 @@ get_header();
           <?php   
             $args = array(
               'post_type' => 'services',
-              'posts_per_page' => 20
+              'posts_per_page' => 20,
+              'order' => 'ASC'
             );    
             $my_query = new WP_Query( $args ); 
             $counter = 0;
@@ -40,7 +41,7 @@ get_header();
             <a 
             data-show-items 
             href="<?php the_permalink();?>" 
-            class="card services-section__card <?php if ($counter < 3) echo 'visible';?>"
+            class="card services-section__card <?php if ($counter < 7) echo 'visible';?>"
             >
               <div class="card__icon services-section__card-icon">
                 <img src="<?php echo get_field('иконка_для_главной_страницы'); ?>" alt="icon">
@@ -73,7 +74,7 @@ get_header();
           <h2 class="h2"><?php echo get_field('заголовок_на_экране_полиса'); ?></h2>
           <span class="section__line"></span>
           <p class="section__text"><?php echo get_field('текст_на_экране_полиса'); ?></p>
-          <a href="#" class="btn btn--black polis-section__btn">
+          <a href="<?php echo get_site_url()?>/<?php echo translateRuUaEn('polis','polis-ua','polis-en');?>" class="btn btn--black polis-section__btn">
           <?php echo translateRuUaEn('Подробнее', 'Детальніше', 'Details');?>
           </a>
         </div>

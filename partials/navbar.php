@@ -5,7 +5,13 @@
 <div class="navbar">
   <div class="container navbar__container">
     <div class="navbar__left">
-      <a href="/" aria-label="logo" class="logo navbar__logo">
+      <a href="<?php
+        echo get_site_url().translateRuUaEn(
+          '/', 
+          '/uk/holovna/', 
+          '/en/home/'
+    );
+      ?>" aria-label="logo" class="logo navbar__logo">
         <img class="logo__desc" src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo">
         <img class="logo__mob" src="<?php echo get_template_directory_uri(); ?>/img/logo-mob.svg" alt="logo">
       </a>
@@ -39,7 +45,8 @@
             <?php   
             $args = array(
               'post_type' => 'services',
-              'posts_per_page' => 20
+              'posts_per_page' => 20,
+              'order' => 'ASC'
             );    
             $my_query = new WP_Query( $args ); 
             if ( $my_query->have_posts() ) {
