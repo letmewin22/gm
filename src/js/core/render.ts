@@ -6,13 +6,16 @@ import {state} from '@/state'
 
 import {resize} from '@emotionagency/utils'
 import {winH} from '@/utils/winH'
+import bgWebP from '@/utils/bgWebP'
 import Dropdown from '@/components/Dropdown'
 import {Nav} from '@/components/Nav'
 import {Loader} from '@/components/loaders/Loader'
 import {lang} from '@/components/lang'
 import {anchors} from '@/components/Anchors'
+import cssWebP from '@/libs/testWebP'
 
 export const render = <T>(H: T): void => {
+  process.env.NODE_ENV === 'production' && cssWebP()
   const hooks = new Hooks(H)
 
   hooks.useNavigateOut(() => {
@@ -25,6 +28,7 @@ export const render = <T>(H: T): void => {
 
   hooks.useBothStart(() => {
     moveEl()
+    bgWebP()
   })
 
   hooks.useLoad(() => {
@@ -50,7 +54,7 @@ export const render = <T>(H: T): void => {
     )
 
     new Form('#form', {
-      URL: 'http://localhost:8080/api/mail.php'
+      URL: 'https://g-m.partners/wp-content/themes/gm/api/telegram/telegram.php'
     })
 
     lang()

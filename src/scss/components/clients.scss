@@ -28,6 +28,9 @@
   border-radius: 5px;
   box-shadow: 0px 0px 20px rgba(179, 179, 179, 0.2);
   padding: 40px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: size(30, 24);
   &:first-child {
     margin-left: 0;
