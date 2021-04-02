@@ -14,7 +14,7 @@
   <p class="section__text"><?php echo get_field('описание_блока_с_командой'); ?></p>
   <div class="team">
     <ul class="team__items">
-    <?php   
+      <?php   
             $args = array(
               'post_type' => 'team',
               'posts_per_page' => 20,
@@ -25,17 +25,24 @@
               while ( $my_query->have_posts() ) {
                 $my_query->the_post();
           ?>
-            <li class="team__item">
-              <div class="team__item-photo"><img src="<?php echo get_field('аватарка_участника_команды'); ?>"
-                  alt="portrait"></div>
-              <h4 class="h4 team__item-h"><?php the_title(); ?></h4>
-              <span class="team__item-pos"><?php echo get_field('должность_участника_команды'); ?></span>
-            </li>
-          <?php             
+      <li class="team__item">
+        <div class="team__item-photo">
+         
+          <picture>
+            <source
+              srcset="<?php echo preg_replace('/\.+jpg|\.png/m', '.webp', get_field('аватарка_участника_команды')); ?>"
+              type="image/webp">
+              <img src="<?php echo get_field('аватарка_участника_команды'); ?>" alt="portrait">
+          </picture>
+        </div>
+        <h4 class="h4 team__item-h"><?php the_title(); ?></h4>
+        <span class="team__item-pos"><?php echo get_field('должность_участника_команды'); ?></span>
+      </li>
+      <?php             
               }            
             }       
             wp_reset_postdata();             
-          ?> 
+          ?>
     </ul>
   </div>
 </div>
@@ -43,4 +50,4 @@
   }            
 }       
 wp_reset_postdata();             
-?> 
+?>

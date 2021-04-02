@@ -83,7 +83,22 @@ function mytheme_customize_register( $wp_customize ) {
 			'settings_name' => 'company_adress_maps',
 			'type' => 'textarea',
 			'label' => 'Ссылка на гугл карты'
-		)
+		),
+		array(
+			'settings_name' => 'jivo_ru',
+			'type' => 'textarea',
+			'label' => 'Код jivochata для русской версии'
+		),
+		array(
+			'settings_name' => 'jivo_uk',
+			'type' => 'textarea',
+			'label' => 'Код jivochata для украинской версии'
+		),
+		array(
+			'settings_name' => 'jivo_en',
+			'type' => 'textarea',
+			'label' => 'Код jivochata для английской версии'
+		),
 	);
 
 	foreach ($company_data as $section) {
@@ -158,7 +173,7 @@ function show_translate() {
 	$translations = pll_the_languages(array('raw'=>1)); 
 
 	if ($translations['uk']['current_lang']){
-		return array($translations['en']['url'], $translations['en']['url'], $translations['ru']['url']);
+		return array($translations['en']['url'], $translations['uk']['url'], $translations['ru']['url']);
 	};
 
 	if ($translations['en']['current_lang']){
@@ -167,6 +182,23 @@ function show_translate() {
 
 	if ($translations['ru']['current_lang']){
 		return array($translations['en']['url'], $translations['uk']['url'], $translations['ru']['url']);
+ };
+	
+}
+
+function show_translate_code() {
+	$translations = pll_the_languages(array('raw'=>1)); 
+
+	if ($translations['uk']['current_lang']){
+		return array('en', 'uk', 'ru');
+	};
+
+	if ($translations['en']['current_lang']){
+			return array('en', 'uk', 'ru');
+	}; 
+
+	if ($translations['ru']['current_lang']){
+		return array('en', 'uk', 'ru');
  };
 	
 }

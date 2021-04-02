@@ -5,7 +5,7 @@ get_header();
 
 <header class="service-header">
   <div class="service-header__bg"
-    style="background-image: url('<?php echo get_template_directory_uri();?>/img/home/bg.jpg')"></div>
+    data-bg="<?php echo get_template_directory_uri();?>/img/home/bg.jpg"></div>
   <div class="container service-header__container a-center">
     <h1 data-i class="h1 service-header__h1"><?php the_title(); ?></h1>
     <p data-i class="service-header__desc"><?php echo get_field('описание_услуги_на_первом_экране'); ?></p>
@@ -30,7 +30,12 @@ get_header();
 
         <li class="services-types__card">
           <div class="services-types__card-icon">
-            <img src="<?php echo $services_types['преимущество_'.$i.'_иконка'] ?>" alt="icon">
+            <picture>
+              <source
+                srcset="<?php echo preg_replace('/\.+jpg|\.png/m', '.webp', $services_types['преимущество_'.$i.'_иконка']); ?>"
+                type="image/webp">
+              <img src="<?php echo $services_types['преимущество_'.$i.'_иконка'] ?>" alt="icon">
+            </picture>
           </div>
           <div class="services-types__content">
             <h3 class="h3 services-types__h3"><?php echo $services_types['преимущество_'.$i.'_заголовок'] ?></h3>
@@ -60,20 +65,26 @@ get_header();
                 $posts_with_term = new WP_Query($args);
                 while ($posts_with_term->have_posts()):
                   $posts_with_term->the_post(); ?>
-                  <li class="specialists__item">
-                    <div class="specialists__item-photo">
-                      <img src="<?php echo get_field('фото_участника_команды'); ?>" alt="">
-                    </div>
-                    <div class="specialists__item-content">
-                      <h3 class="specialists__item-h"><?php the_title(); ?></h3>
-                      <div class="specialists__item-occupation">
-                      <?php echo get_field('должность_участника_команды'); ?>
-                      </div>
-                      <div class="specialists__item-text">
-                        <?php echo get_field('биографический_текст'); ?>
-                      </div>
-                    </div>
-                  </li>
+        <li class="specialists__item">
+          <div class="specialists__item-photo">
+            
+            <picture>
+              <source
+                srcset="<?php echo preg_replace('/\.+jpg|\.png/m', '.webp', get_field('фото_участника_команды')); ?>"
+                type="image/webp">
+                <img src="<?php echo get_field('фото_участника_команды'); ?>" alt="">
+            </picture>
+          </div>
+          <div class="specialists__item-content">
+            <h3 class="specialists__item-h"><?php the_title(); ?></h3>
+            <div class="specialists__item-occupation">
+              <?php echo get_field('должность_участника_команды'); ?>
+            </div>
+            <div class="specialists__item-text">
+              <?php echo get_field('биографический_текст'); ?>
+            </div>
+          </div>
+        </li>
         <?php
             endwhile;
             wp_reset_postdata();

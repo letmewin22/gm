@@ -8,15 +8,15 @@
       while ( $my_query2->have_posts() ) {
         $my_query2->the_post();
   ?>
-    
-    <section class='section clients'>
-      <div class='container section__container a-center last'>
-        <h2 class="h2"><?php echo get_field('заголовок_блока_с_клиентами'); ?></h2>
-        <span class="section__line"></span>
-        <p class="section__text"><?php echo get_field('описание_блока_с_клиентами'); ?></p>
-        <div class="clients__items-wrapper">
-          <ul class="clients__items">
-          <?php
+
+<section class='section clients'>
+  <div class='container section__container a-center last'>
+    <h2 class="h2"><?php echo get_field('заголовок_блока_с_клиентами'); ?></h2>
+    <span class="section__line"></span>
+    <p class="section__text"><?php echo get_field('описание_блока_с_клиентами'); ?></p>
+    <div class="clients__items-wrapper">
+      <ul class="clients__items">
+        <?php
             $args = array(
               'post_type' => 'clients',
               'posts_per_page' => 40
@@ -26,24 +26,30 @@
               while ( $my_query->have_posts() ) {
                 $my_query->the_post();
           ?>
-            <li class="clients__item">
-                <img src="<?php  echo get_field('логотип_клиента');?>" alt="client logo">
-              </li>
-          <?php             
+        <li class="clients__item">
+          
+          <picture>
+            <source
+              srcset="<?php echo preg_replace('/\.+jpg|\.png/m', '.webp', get_field('логотип_клиента')); ?>"
+              type="image/webp">
+              <img src="<?php  echo get_field('логотип_клиента');?>" alt="client logo">
+          </picture>
+        </li>
+        <?php             
               }            
             }       
             wp_reset_postdata();             
-          ?> 
-          </ul>
-        </div>
-        <div class="clients__scrollbar">
-          <div class="clients__thumb"></div>
-        </div>
-      </div>
-    </section>
+          ?>
+      </ul>
+    </div>
+    <div class="clients__scrollbar">
+      <div class="clients__thumb"></div>
+    </div>
+  </div>
+</section>
 
 <?php             
     }            
   }       
   wp_reset_postdata();             
-?> 
+?>

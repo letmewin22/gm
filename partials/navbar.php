@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <nav data-move="navbar__mobile-nav,1,960" class="navbar__nav">
+    <nav data-move="navbar__mobile-nav,1,1160" class="navbar__nav">
       <ul class="navbar__ul">
         <li class="navbar__li dropdown">
           <div class="dropdown__btn">
@@ -68,6 +68,16 @@
                 'Полис', 
                 'Поліс', 
                 'Polis'
+          );
+          ?>
+          </a>
+        </li>
+        <li class="navbar__li">
+          <a href="<?php echo get_site_url()?>/<?php echo translateRuUaEn('kontakty','kontakti','contacts');?>">
+          <?php echo translateRuUaEn(
+                'Контакты', 
+                'Контакти', 
+                'Contacts'
           );
           ?>
           </a>

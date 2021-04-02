@@ -19,7 +19,12 @@
               <p class="services-instruction__text"><?php echo get_field('описание_в_слайде'); ?></p>
             </div>
             <div class="services-instruction__slide-content-right">
-              <img src="<?php echo get_field('изображение'); ?>" alt="" class="services-instruction__img">
+              <picture>
+              <source
+                srcset="<?php echo preg_replace('/\.+jpg|\.png/m', '.webp',  get_field('изображение')); ?>"
+                type="image/webp">
+                <img src="<?php echo get_field('изображение'); ?>" alt="" class="services-instruction__img">
+            </picture>
             </div>
           </div>
         </div>
