@@ -22,6 +22,6 @@ export class Loader {
         state.isLoaded = true
       }
     })
-    tl.to(this.$el, {duration: 0.5, opacity: 0})
+    tl.to(this.$el, {duration: 0.25, opacity: 0})
   }
 }

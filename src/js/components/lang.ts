@@ -9,6 +9,14 @@ export const lang = (): void => {
   const translateUrlNode: HTMLElement = document.querySelector(
     '[data-translate-urls]'
   )
+
+  if (
+    !translateUrlNode.dataset.translateUrls ||
+    !translateUrlNode.dataset.codes
+  ) {
+    return
+  }
+
   const translateUrls = translateUrlNode.dataset.translateUrls.split(',')
   const currentLang = translateUrlNode.dataset.currentLang
   const langCodes = translateUrlNode.dataset.codes.split(',')

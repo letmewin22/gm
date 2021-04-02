@@ -55,7 +55,7 @@
 }
 
 .navbar__lang-content {
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     position: absolute;
     height: calc(var(--h) + 24px);
     .navbar__lang-link {
@@ -74,7 +74,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     padding-left: size(60, 20);
     padding-right: size(60, 20);
     padding-bottom: 60px;
@@ -93,7 +93,7 @@
   line-height: 1em;
   display: flex;
   margin-right: size(161, 40);
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     flex-direction: column;
     align-items: start;
     font-size: 32px;
@@ -105,7 +105,7 @@
 .navbar__li {
   cursor: pointer;
   + .navbar__li {
-    @include media('>#{$br2}') {
+    @include media('>#{$br1}') {
       margin-left: size(84, 40);
       margin-top: 0px;
     }
@@ -131,7 +131,7 @@
       stroke: white;
     }
   }
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     svg {
       margin-left: 14px;
       width: 20px;
@@ -169,7 +169,7 @@
   background-color: transparent;
   display: none;
   transition: transform 0.7s ease;
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     display: block;
   }
   &.active {
@@ -201,7 +201,7 @@
 }
 
 .navbar__mobile-nav {
-  @include media('<=#{$br2}') {
+  @include media('<=#{$br1}') {
     position: fixed;
     width: 100%;
     top: 0;

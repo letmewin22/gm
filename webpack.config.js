@@ -28,7 +28,8 @@ function createConfig(env) {
         ? '[name].[contenthash:8].chunk.js'
         : '[name].chunk.js',
       path: path.resolve(__dirname, 'build/js/'),
-      publicPath: '/wp-content/themes/gm/js/' //'/wp-content/themes/gm/'
+      // publicPath: '/wp-content/themes/gm/js/'
+      publicPath: './js/' //'/wp-content/themes/gm/'
     },
     resolve: {
       extensions: ['.js', '.ts'],

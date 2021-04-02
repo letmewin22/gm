@@ -60,3 +60,9 @@ button {
   transform: translateY(150px);
   opacity: 0;
 }
+
+.error__desc {
+  font-size: size(20, 16);
+  margin-top: 24px;
+  max-width: 998px;
+}

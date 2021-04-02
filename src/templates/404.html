@@ -1,0 +1,17 @@
+{% set title = "404" %}
+{% set route = "errorPage" %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<header class="home-header">
+  <div class="home-header__bg" style="background-image: url('./img/home/bg.jpg')"></div>
+  <div class="container home-header__container a-center">
+    <h1 class="h1 home-header__h1">404 <br> Страница, которую вы ищете, не&nbsp;найдена</h1>
+    <p class="error__desc">Рекомендуем вернуться на главную</p>
+    <a href="/" class="btn btn--white home-header__btn">Вернуться на главную</span>
+    </a>
+  </div>
+</header>
+
+{% endblock %}

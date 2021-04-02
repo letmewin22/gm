@@ -1,0 +1,106 @@
+{% set title = "Contacts" %}
+{% set route = "contacts" %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  <div class="contacts">
+    <div class="container contacts-container">
+      <div class="contacts-container__left">
+        <h1 class="h1">Контакты</h1>
+        <div class="contacts__items">
+          <div class="contacts__item">
+            <div class="contacts__item-h">Телефон</div>
+            <a href="tel:+380730480000" class="contacts__item-link">+38 073 048 00 00</a>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__item-h">E-mail</div>
+            <a href="mailto:inbox@m.partners" class="contacts__item-link">inbox@m.partners</a>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__item-h">Социальные сети</div>
+            <p class="contacts__item-p">Подписывайтесь на наши страницы в соцсетях — здесь мы публикуем новости, связанные с нашей практикой и юридические рекомендации по разным аспектам права</p>
+            <a target='_blank' rel='noopener noreferrer' href="dsada" class="contacts__item-link contacts__item-link--medium">facebook</a>
+            <a target='_blank' rel='noopener noreferrer' href="tel:+380730480000" class="contacts__item-link contacts__item-link--medium">instagram</a>
+            <a target='_blank' rel='noopener noreferrer' href="tel:+380730480000" class="contacts__item-link contacts__item-link--medium">telegram</a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-container__right">
+        <iframe title="google-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d635.1297572688934!2d30.5012327!3d50.4500589!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5fbea97be7%3A0xbd34f64905ff82a!2z0YPQuy4g0J7Qu9C10YHRjyDQk9C-0L3Rh9Cw0YDQsCwgNTIsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1615969946394!5m2!1sru!2sua" width="960" height="1080" frameborder="0" style="border:0;width: 100%;height: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy"></iframe>
+      </div>
+
+    </div>
+    <div class="contacts-bottom">
+      <div class="footer footer--dark">
+        <div class="container footer__container">
+          <div class="container__left">
+            <h2 class="h2 footer__h2">Записаться на консультацию</h2>
+            <div class="section__line"></div>
+            <p class="footer__text">Опишите суть вопроса и мы свяжемся с Вами в ближайшее время для записи на консультацию</p>
+          </div>
+          <div class="container__right">
+            <form id="form" class="form" novalidate>
+              <div class="input-container form__input-container">
+                <input 
+          data-input 
+          type="text" class="input form__input" 
+          name="Name" 
+          id="name"
+          >
+                <label class="label form__label" for="name">Ваше имя</label>
+              </div>
+              <div class="input-container form__input-container">
+                <input 
+          data-input 
+          data-validation="minlength(4) phone" 
+          type="tel" 
+          class="input form__input" 
+          name="Phone" 
+          id="tel"
+          >
+                <label class="label form__label" for="tel">Ваш телефон</label>
+                <div class="input-validate form__input-validate">Некорректный номер</div>
+              </div>
+              <div class="input-container form__input-container">
+                <textarea 
+          data-input 
+          data-validation="maxlength(1000)" 
+          type="text" 
+          class="input form__input" 
+          name="Message" 
+          id="text"
+          ></textarea>
+                <label class="label form__label" for="adress">Опишите суть вопроса</label>
+                <div data-length class="length-counter form__length-counter">1000</div>
+                <div class="input-validate form__input-validate">Превышена максимальная длина</div>
+              </div>
+              <div data-error class="form__error-message">
+                <div class="form__error-message-text">Произошла ошибка. Попробуйте ещё раз</div>
+              </div>
+              <button class="btn btn--black form__btn">
+                <span class="form__btn-text">Получить консультацию</span>
+                <span class="btn__overlay"></span>
+                <span class="form__btn-loader">
+                  <svg class="circular" viewBox="25 25 50 50">
+                    <circle stroke="green" class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                  </svg>
+                </span>
+              </button>
+              <small class="form__policy">Нажимая отправить вы соглашаетесь с условиями обработки персональных данных</small>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container contacts-bottom__container">
+        <div class="footer__bottom-info contacts__bottom-info">
+          <div class="footer__bottom-info-content contacts__bottom-info-content">
+            <p class="footer__bottom-id contacts__bottom-id">Адвокатское объеденение "Г.М. Партнерс"<br>ИКЮЛ: 42308793</p>
+            <a href="#" class="footer__bottom-privacy contacts__bottom-privacy">«Политика конфиденциальности и адвокатская тайна»</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
